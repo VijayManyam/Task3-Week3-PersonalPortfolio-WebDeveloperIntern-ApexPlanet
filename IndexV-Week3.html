@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manyam Vijay Kumar - Portfolio</title>
+  <style>
+    :root {
+      --primary: #007bff;
+      --secondary: #17a2b8;
+      --bg: #f0f4f8;
+      --card-bg: #ffffff;
+      --text: #333;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --purple: #6a0dad;
+      --border: #ddd;
+      --high: #ff4d4f;
+      --medium: #faad14;
+      --low: #52c41a;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      padding: 1rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0056b3;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--secondary);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #138496;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #343a40;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    .extra-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin: 2rem auto;
+      max-width: 1000px;
+      padding: 0 1rem;
+    }
+
+    .extra-section .card {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .priority-high { border-left: 5px solid var(--high); }
+    .priority-medium { border-left: 5px solid var(--medium); }
+    .priority-low { border-left: 5px solid var(--low); }
+
+    li {
+      background-color: #eef2f5;
+      margin: 0.5rem 0;
+      padding: 0.7rem 1rem;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li.completed span.task-text {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    li button {
+      background-color: #cc0000;
+      color: #fff;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .filters {
+      margin-top: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 15px;
+      transition: 0.3s border-color ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    .success {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manyam Vijay Kumar </h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="card" id="about">
+      <h2>About Me</h2>
+      <p>I am an enthusiastic and goal-driven B.Tech Computer Science and Engineering student at Anurag University (AU), Hyderabad with a strong interest in Python programming and web development. I am currently looking for internship opportunities where I can apply my knowledge, gain practical experience, and contribute to impactful projects.</p>
+    </div>
+
+    <div class="card" id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python Programming</li>
+        <li>Basic Java and C Programming</li>
+        <li>Git and GitHub</li>
+        <li>Teamwork and Communication</li>
+      </ul>
+    </div>
+
+    <div class="card" id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech (CSE)</strong> – Anurag University, Hyderabad<br>Expected Graduation: 2026</li>
+        <li><strong>Diploma (ECE)</strong> – Anurag College Of Engineering, Ghatkesar <br>Graduated: 2023</li>
+        <li><strong>SSC</strong> – M B Grammar High School, Suraram <br>Graduated: 2020</li>
+      </ul>
+    </div>
+
+    <div class="card" id="contact">
+      <h2>Social Networks</h2>
+      <p>Email: <a href="mailto:23eg505r54@anurag.edu.in">23eg505r54@anurag.edu.in</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/vijay-manyam-97894a299" target="_blank">Visit Profile</a></p>
+      <button onclick="showAlert()">Click Me</button>
+    </div>
+  </div>
+
+  <div class="extra-section">
+    <div class="card">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+        <div id="formSuccess" class="success"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Task Description">
+      <select id="priority">
+        <option value="high">High</option>
+        <option value="medium" selected>Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <input type="date" id="dueDate">
+      <button id="addTaskBtn">Add Task</button>
+
+      <div class="filters">
+        <label for="filterPriority">Filter by Priority:</label>
+        <select id="filterPriority">
+          <option value="all">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Manyam Vijay Kumar | Anurag University, Hyderabad
+  </footer>
+
+  <script>
+    function showAlert() {
+      alert("Button was clicked!");
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+      const formSuccess = document.getElementById('formSuccess');
+
+      if (!name.value || !email.value || !message.value) {
+        formSuccess.textContent = 'Please fill all fields correctly.';
+        formSuccess.style.color = 'red';
+        return;
+      }
+
+      formSuccess.textContent = 'Message sent successfully!';
+      formSuccess.style.color = 'green';
+      this.reset();
+    });
+
+    // To-Do List
+    const taskInput = document.getElementById('taskInput');
+    const prioritySelect = document.getElementById('priority');
+    const dueDateInput = document.getElementById('dueDate');
+    const taskList = document.getElementById('taskList');
+    const filterSelect = document.getElementById('filterPriority');
+
+    document.getElementById('addTaskBtn').addEventListener('click', function () {
+      const task = taskInput.value.trim();
+      const priority = prioritySelect.value;
+      const dueDate = dueDateInput.value;
+
+      if (task === '') return;
+
+      const li = document.createElement('li');
+      li.classList.add(`priority-${priority}`);
+      li.innerHTML = `
+        <div>
+          <span class="task-text" onclick="this.parentElement.parentElement.classList.toggle('completed')">${task}</span>
+          <small style="display:block; color: #888;">${dueDate ? 'Due: ' + dueDate : ''}</small>
+        </div>
+        <button onclick="this.parentElement.remove()">X</button>
+      `;
+
+      taskList.appendChild(li);
+      taskInput.value = '';
+      dueDateInput.value = '';
+      filterTasks();
+    });
+
+    filterSelect.addEventListener('change', filterTasks);
+
+    function filterTasks() {
+      const filter = filterSelect.value;
+      const items = taskList.querySelectorAll('li');
+      items.forEach(item => {
+        item.style.display = (filter === 'all' || item.classList.contains(`priority-${filter}`)) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
